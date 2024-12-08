@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: AirlineAPI
+  app:
+      jwtSecret: ${JWT_SECRET}
+      jwtExpirationMs: ${JWT_EXPIRATION_MS}
+  ecom:
+      app:
+          jwtCookieName: jwtCookie
+  datasource:
+      url: ${DATASOURCE_URL}
+      username: ${DATASOURCE_USERNAME}
+      password: ${DATASOURCE_PASSWORD}
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+          ddl-auto: update
+    properties:
+          hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            format_sql: true
+    show-sql: true
+
+frontend:
+    url: ${FRONTEND_URL}
+server:
+  port: 8087
