@@ -31,6 +31,10 @@ public class GatewayConfig {
                         .uri("http://localhost:8086"))
                 .route("message_service", r -> r.path("/api/messages/**")
                         .uri("http://localhost:8088"))
+                .route("payment_service", r -> r.path("/api/payments/**")
+                        .uri("http://localhost:8090"))
+                .route("notification_service", r -> r.path("/api/notifications/**")
+                        .uri("http://localhost:8091"))
                 .build();
     }
 }
