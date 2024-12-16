@@ -11,32 +11,32 @@ spring:
       routes:
         # User Service
         - id: user_service
-          uri: http://localhost:8081
+          uri: http://localhost:8087
           predicates:
             - Path=/api/users/**
         # Ticket Service
         - id: ticket_service
-          uri: http://localhost:8082
+          uri: http://localhost:8087
           predicates:
             - Path=/api/tickets/**
         # Listing Service
         - id: listing_service
-          uri: http://localhost:8083
+          uri: http://localhost:8087
           predicates:
             - Path=/api/listings/**
         # Flight Service
         - id: flight_service
-          uri: http://localhost:8084
+          uri: http://localhost:8087
           predicates:
             - Path=/api/flights/**
         # Booking Service
         - id: booking_service
-          uri: http://localhost:8085
+          uri: http://localhost:8087
           predicates:
             - Path=/api/bookings/**
         # Authentication Service
         - id: auth_service
-          uri: http://localhost:8086
+          uri: http://localhost:8087
           predicates:
             - Path=/api/auth/**
         - id: message_service
