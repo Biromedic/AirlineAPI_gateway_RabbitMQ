@@ -2,7 +2,7 @@ spring:
   application:
     name: messaging-service
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest

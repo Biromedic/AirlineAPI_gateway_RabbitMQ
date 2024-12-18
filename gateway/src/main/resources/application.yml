@@ -11,44 +11,47 @@ spring:
       routes:
         # User Service
         - id: user_service
-          uri: http://localhost:8087
+          uri: http://airlineapi:8087
           predicates:
             - Path=/api/users/**
         # Ticket Service
         - id: ticket_service
-          uri: http://localhost:8087
+          uri: http://airlineapi:8087
           predicates:
             - Path=/api/tickets/**
         # Listing Service
         - id: listing_service
-          uri: http://localhost:8087
+          uri: http://airlineapi:8087
           predicates:
             - Path=/api/listings/**
         # Flight Service
         - id: flight_service
-          uri: http://localhost:8087
+          uri: http://airlineapi:8087
           predicates:
             - Path=/api/flights/**
         # Booking Service
         - id: booking_service
-          uri: http://localhost:8087
+          uri: http://airlineapi:8087
           predicates:
             - Path=/api/bookings/**
         # Authentication Service
         - id: auth_service
-          uri: http://localhost:8087
+          uri: http://airlineapi:8087
           predicates:
             - Path=/api/auth/**
+        # Message Service
         - id: message_service
-          uri: http://localhost:8088
+          uri: http://messaging:8088
           predicates:
             - Path=/api/messages/**
+        # Payment Service
         - id: payment_service
-          uri: http://localhost:8090
+          uri: http://paymentservice:8090
           predicates:
             - Path=/api/payments/**
+        # Notification Service
         - id: notification_service
-          uri: http://localhost:8091
+          uri: http://notificationservice:8091
           predicates:
             - Path=/api/notifications/**
 
@@ -67,6 +70,3 @@ management:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
-
-
-
